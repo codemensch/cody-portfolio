@@ -5,10 +5,79 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel='stylesheet' type='text/css' href='css/custom.css'>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
 <body>
 
 <%= yield %>
-
+<section id='name'>
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid no-padding-margin">
+        <button type="button" class="navbar-toggle no-padding-margin">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      </div>
+    </nav>
+    
+    <!-- Logo/Subtitle -->
+    <div class='container-fluid'>
+      <div class='row text-center'>
+        <div class='col-xs-12'>
+          <p class='logo' id='c-logo'>C</p>
+          <p class='logo' id='f-logo'>F</p>
+        </div>
+      </div>
+      <div class='row text-center'>
+        <div class='col-xs-12'>
+          <p id='byline-1'><strong>cody fontes</strong></p>
+        </div>
+      </div>
+      <div class='row text-center'>
+        <div class='col-xs-12'>
+          <p id='byline-2'>california based | full stack rails developer</p>
+        </div>
+      </div>
+    </div>
+  </header>
+</section>
+<section id='portfolio'>
+  <div class='container-fluid'>
+    <div class='row'>
+      <div class='col-xs-12 col-sm-12 col-md-4'>
+        <img src='img/social_site.png' alt='Community Site Project' class='img-responsive center-block'>
+      </div>
+      <div class='col-xs-12 col-sm-12 col-md-4'>
+        <img src='img/steadicam_site.png' alt='Steadicam Site Project' class='img-responsive center-block'>
+      </div>
+      <div class='col-xs-12 col-sm-12 col-md-4'>
+        <img src='img/social_site.png' alt='Community Site Project' class='img-responsive center-block'>
+      </div>
+      <div class='col-xs-12 col-sm-12 col-md-4'>
+        <img src='img/steadicam_site.png' alt='Steadicam Site Project' class='img-responsive center-block'>
+      </div>
+      <div class='col-xs-12 col-sm-12 col-md-4'>
+        <img src='img/social_site.png' alt='Community Site Project' class='img-responsive center-block'>
+      </div>
+      <div class='col-xs-12 col-sm-12 col-md-4'>
+        <img src='img/steadicam_site.png' alt='Steadicam Site Project' class='img-responsive center-block'>
+      </div>
+    </div>
+  </div>
+</section>
+<section id='education'>
+  
+</section>
+<section id='about'>
+  
+</section>
+<section id='contact'>
+  
+</section>
 </body>
 </html>
