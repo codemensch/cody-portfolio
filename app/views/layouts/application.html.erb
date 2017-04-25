@@ -5,79 +5,277 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- Mobile view sizing -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Custom Stylesheet -->
   <link rel='stylesheet' type='text/css' href='css/custom.css'>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Monoton|Playfair+Display+SC:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <!-- Material Design Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Font Mfizz -->
+  <link rel="stylesheet" href="css/font-mfizz/font-mfizz.css">
 </head>
 <body>
 
-<%= yield %>
-<section id='name'>
-  <header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid no-padding-margin">
-        <button type="button" class="navbar-toggle no-padding-margin">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-      </button>
-      </div>
-    </nav>
-    
-    <!-- Logo/Subtitle -->
+  <%= yield %>
+  <section id='name'>
+      <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!---
+            <button type="button" class="navbar-toggle no-padding-margin">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          -->
+            <div><a href="#" class="navbar-link">|| cody fontes</a></div>
+            <div class='nav-subtitle'>student web developer ||</div>
+          </div>
+        </nav>
+        
+        <!-- Logo/Subtitle -->
+        <div class='container-fluid'>
+          <!--
+          <div class='row'>
+            <div class='col-xs-12 text-center'>
+              <div class='logo logo-center' id='c-logo'>C</div>
+              <div class='logo-center text-nowrap' id='byline-1'>cody fontes</div>
+            </div>
+          </div>
+          <div class='row text-center'>
+            <div class='col-xs-12'>
+              <div class='text-nowrap' id='byline-2'>full stack rails developer student</div>
+            </div>
+          </div>
+          
+          <div class='row'>
+            <div class='col-xs-12'>
+              <ul class="nav nav-pills">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages</a></li>
+              </ul>
+            </div>
+          </div>
+          -->
+          
+          <div class='row' id='header-img'>
+            <div class='col-xs-6 no-padding-margin'>
+              <img src='img/header_square_1.jpg' alt='Computer with code on it' class='img-responsive'>
+              <div id='test-1'>
+                <div id='briefcase-container'></div>
+                <div id='select-container'></div>
+              </div>
+              <!-- <div id='arrow-container'></div> -->
+            </div>
+            <div class='col-xs-6 no-padding-margin'>
+              <div id='graduation-container'></div>
+              <div id='select-graduation-container'></div>
+              <img src='img/header_square_2.jpg' alt='Man in front of whiteboard' class='img-responsive'>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-6 no-padding-margin'>
+              <img src='img/header_square_3.jpg' alt='Computer with code on it' class='img-responsive'>
+              <div id='user-container'></div>
+              <div id='select-user-container'></div>
+            </div>
+            <div class='col-xs-6 no-padding-margin'>
+              <div id='envelope-container'></div>
+              <div id='select-envelope-container'></div>
+              <img src='img/header_square_4.jpg' alt='Man in front of whiteboard' class='img-responsive'>
+            </div>
+          </div>
+        </div>
+      </header>
+  </section>
+  
+  <!-- About -->
+  <section id='about'>
     <div class='container-fluid'>
-      <div class='row text-center'>
+      <h3>Who I Am</h3>
+      <div class='row' id='animation-container-ellipsis'>
         <div class='col-xs-12'>
-          <p class='logo' id='c-logo'>C</p>
-          <p class='logo' id='f-logo'>F</p>
+          <div id='ellipsis-container' class='section-animation'></div>
         </div>
       </div>
-      <div class='row text-center'>
-        <div class='col-xs-12'>
-          <p id='byline-1'><strong>cody fontes</strong></p>
+      <div class='row'>
+        <div class='col-xs-12 subsection-padding'>
+          <p>
+            Hi, I'm Cody Fontes, a full stack web development student, currently based in Northern
+            California.
+          </p>
+          <p>
+            My continuing journey toward becoming a web developer isn't neat and tidy. It started with getting my 
+            first degree in Biology, getting my second in Biomedical Informatics, working in the food safety
+            industry, leaving the sciences alltogether to tour the U.S. in a band and even working for the British
+            Government.
+          </p>
+          <p>
+            Creativity is in my blood. I need it to be driven. Development is the perfect blend of creativity and 
+            science. Coding provides endless possibilities in scope and industry. My dream is to work for a major brand, 
+            non-profit or start-up.
+          </p>
         </div>
-      </div>
-      <div class='row text-center'>
-        <div class='col-xs-12'>
-          <p id='byline-2'>california based | full stack rails developer</p>
+        <div class='col-xs-12 no-padding-margin'>
+          <img src='img/codyfontes_icecream.jpg' alt='Cody Fontes eating ice cream' class='img-responsive center-block'>
         </div>
       </div>
     </div>
-  </header>
-</section>
-<section id='portfolio'>
-  <div class='container-fluid'>
-    <div class='row'>
-      <div class='col-xs-12 col-sm-12 col-md-4'>
-        <img src='img/social_site.png' alt='Community Site Project' class='img-responsive center-block'>
+  </section>
+  
+  <!-- Education -->
+  <section id='education'>
+    <div class='container-fluid'>
+      <h3>What I Know</h3>
+      <div class='row' id='animation-container-emphasis'>
+        <div class='col-xs-12'>
+          <div id='emphasis-container' class='section-animation'></div>
+        </div>
       </div>
-      <div class='col-xs-12 col-sm-12 col-md-4'>
-        <img src='img/steadicam_site.png' alt='Steadicam Site Project' class='img-responsive center-block'>
+      <div class='row'>
+        <div class='col-xs-12'>
+          <p>
+            To prepare for today's web development needs, here's the gauntlet 
+            of resources I'm learning from and my progress in each:
+          </p>
+        </div>
       </div>
-      <div class='col-xs-12 col-sm-12 col-md-4'>
-        <img src='img/social_site.png' alt='Community Site Project' class='img-responsive center-block'>
+      <!-- Schools -->
+      <!-- School #1 -->
+      <div class='panel panel-default'>
+        <div class="panel-body">
+          <div class='row vertical-center'>
+            <div class='col-xs-3 col-xs-offset-1 school-logo'>
+              <img class='img-responsive' src='img/codermanual_logo.png' alt='Coder Manual Logo'>
+            </div>
+            <div class='col-xs-7'>
+              <h3 class='no-padding-margin'>Coder Manual</h3>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12'>
+              <p class='text-center'>Video-based full-stack web development course. Includes Harvard CS50 and Dartmouth Khan Academy courses.</p>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12'>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                  <span class="sr-only">40% Complete (success)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class='col-xs-12 col-sm-12 col-md-4'>
-        <img src='img/steadicam_site.png' alt='Steadicam Site Project' class='img-responsive center-block'>
+      <!-- School #2 -->
+      <div class='panel panel-default'>
+        <div class="panel-body">
+          <div class='row vertical-center'>
+            <div class='col-xs-3 col-xs-offset-1 school-logo'>
+              <img class='img-responsive' src='img/devry_logo.png' alt='DeVry University Logo'>
+            </div>
+            <div class='col-xs-7'>
+              <h3 class='no-padding-margin'>DeVry University</h3>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 text-center'>
+              <p class='text-center'>Accelerated 4 year computer science degree specializing in the medical and biological research fields.</p>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12'>
+              <div class="progress">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                  <span class="sr-only">100% Complete</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
       </div>
-      <div class='col-xs-12 col-sm-12 col-md-4'>
-        <img src='img/social_site.png' alt='Community Site Project' class='img-responsive center-block'>
-      </div>
-      <div class='col-xs-12 col-sm-12 col-md-4'>
-        <img src='img/steadicam_site.png' alt='Steadicam Site Project' class='img-responsive center-block'>
+      <!-- School #3 -->
+      <div class='panel panel-default'>
+        <div class="panel-body">
+          <div class='row vertical-center'>
+            <div class='col-xs-3 col-xs-offset-1 school-logo'>
+              <img class='img-responsive' src='img/fcc_logo.png' alt='Free Code Camp Logo'>
+            </div>
+            <div class='col-xs-7'>
+              <h3 class='no-padding-margin'>Free Code Camp</h3>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 text-center'>
+              <p class='text-center'>A collaborative, open source coding bootcamp that partners with non-profits providing students with real-world web development projects.</p>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12'>
+              <div class="progress">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                  <span class="sr-only">60% Complete (warning)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section id='education'>
+  </section>
   
-</section>
-<section id='about'>
+  <section id='portfolio'>
+    <div class='container-fluid'>
+      <h3>What I've Done</h3>
+      <div class='row' id='animation-container-star'>
+        <div class='col-xs-12 col-sm-4 col-sm-offset-4'>
+          <div id='star-container' class='section-animation'></div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-xs-12 col-sm-12 col-md-4'>
+          <img src='img/portfolio_dev_match.jpg' alt='Community Site Project' class='img-responsive center-block'>
+        </div>
+        <div class='col-xs-12 col-sm-12 col-md-4'>
+          <img src='img/portfolio_steadicam.jpg' alt='Steadicam Site Project' class='img-responsive center-block'>
+        </div>
+        <div class='col-xs-12 col-sm-12 col-md-4'>
+          <img src='img/portfolio_biomed.jpg' alt='Community Site Project' class='img-responsive center-block'>
+        </div>
+        <div class='col-xs-12 col-sm-12 col-md-4'>
+          <img src='img/portfolio_sunglasses.jpg' alt='Steadicam Site Project' class='img-responsive center-block'>
+        </div>
+        <div class='col-xs-12 col-sm-12 col-md-4'>
+          <img src='img/portfolio_drums.jpg' alt='Community Site Project' class='img-responsive center-block'>
+        </div>
+        <div class='col-xs-12 col-sm-12 col-md-4'>
+          <img src='img/portfolio_bicycle.jpg' alt='Steadicam Site Project' class='img-responsive center-block'>
+        </div>
+      </div>
+    </div>
+  </section>
   
-</section>
-<section id='contact'>
-  
-</section>
+  <!-- Footer -->
+  <section id='contact'>
+    <div class='container-fluid'>
+      <div class='row'>
+        <div class='col-xs-12' id='footer'>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- JavaScript Apps -->
+  <script src="js/img_load.js"></script>
 </body>
 </html>
