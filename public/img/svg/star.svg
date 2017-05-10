@@ -11,6 +11,6 @@
 		</rdf:RDF>
 	</metadata>
 	<g id="layer1" transform="translate(-196.51 -390.27)">
-		<path id="path4209" stroke-linejoin="round" d="m293.1 663.25c102-504.02 38.429-166.77 170.27-34.928 6.5616 6.5616-265.37-139.71-261.96-139.71 373.97 0 302.35-49.127 100.42 152.81" stroke="#000" stroke-linecap="round" stroke-width="10" fill="none"/>
+		<path id="star-path" stroke-linejoin="round" d="m293.1 663.25c102-504.02 38.429-166.77 170.27-34.928 6.5616 6.5616-265.37-139.71-261.96-139.71 373.97 0 302.35-49.127 100.42 152.81" stroke="#000" stroke-linecap="round" stroke-width="10" fill="none"/>
 	</g>
 </svg>

@@ -16,8 +16,7 @@ h2 {
 
 /*Section Headings */
 .container-fluid > h3 {
-    font-size: 30px;
-    font-weight: 900;
+    font-size: 200%;
     text-transform: uppercase;
     text-align: center;
     padding-top: 40px;
@@ -42,20 +41,61 @@ section {
     margin-bottom: 50px;
 }
 
+/*Header Animations */
 
 #animation-container-ellipsis{
     margin-top: -150px;
 }
 
+    #ellipsis {
+        height: 95%;
+        width: 95%;
+        position: absolute;
+        z-index: 1;
+    }
+    
+        #ellipsis-path {
+            stroke-dasharray: 1569;
+            stroke-dashoffset: 1569;
+            animation: draw-ellipsis .5s linear forwards normal infinite paused;
+        }
+      
+
 #animation-container-emphasis {
     margin-top: -50px;
 }
+
+    #emphasis {
+        height: 70%;
+        width: 70%;
+        position: absolute;
+        z-index: 1;
+    }
+
+        #emphasis-path {
+                stroke-dasharray: 1569;
+                stroke-dashoffset: 1569;
+                animation: draw-emphasis .5s linear forwards normal infinite paused;
+        }
 
 #animation-container-star {
     margin-top: -120px;
     margin-left: -60px;
 }
 
+    #star {
+        height: 35%;
+        width: 35%;
+        position: absolute;
+        z-index: 1;
+    }
+    
+        #star-path {
+                stroke-dasharray: 1425;
+                stroke-dashoffset: 1425;
+                animation: draw-star .5s linear forwards normal infinite paused;
+        }
+    
     .section-animation {
         height: 120px;
     }
@@ -65,27 +105,6 @@ section {
             right: 0;
             margin: auto;
         }
-        
-#ellipsis {
-    height: 95%;
-    width: 95%;
-    position: absolute;
-    z-index: 1;
-}
-
-#emphasis {
-    height: 70%;
-    width: 70%;
-    position: absolute;
-    z-index: 1;
-}
-
-#star {
-    height: 35%;
-    width: 35%;
-    position: absolute;
-    z-index: 1;
-}
 
 
 /*Navbar Styles*/
@@ -102,13 +121,14 @@ section {
 .navbar-default .navbar-link {
     color: black;
     font-family: 'Permanent Marker';
-    font-size: 200%;
+    font-size: 275%;
     text-decoration: none;
 }
 
 .nav-subtitle {
     font-family: 'Permanent Marker';
     font-size: 150%;
+    
 }
 
 .navbar-toggle {
@@ -161,10 +181,22 @@ section {
 .path {
   stroke-dasharray: 875;
   stroke-dashoffset: 875;
-  animation: draw .75s linear forwards;
+  animation: draw-arrow .75s linear forwards;
+  animation-delay: 1s;
 }
 
-@keyframes draw {
+/* CSS Animations */
+@keyframes draw-arrow { /* Arrow */
+  from {
+      stroke-dashoffset: 875; 
+  }
+  
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-briefcase { /* Briefcase select */
   from {
       stroke-dashoffset: 925; 
   }
@@ -174,22 +206,169 @@ section {
   }
 }
 
-@keyframes erase {
+    @keyframes erase-briefcase {
+      from {
+          stroke-dashoffset: 925; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+@keyframes draw-grad { /*Education select */
   from {
-      stroke-dashoffset: 925; 
+      stroke-dashoffset: 1025; 
   }
   
   to {
     stroke-dashoffset: 0;
   }
 }
+
+    @keyframes erase-grad {
+      from {
+          stroke-dashoffset: 1025; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+@keyframes draw-user { /*About select */
+  from {
+      stroke-dashoffset: 850; 
+  }
+  
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+    @keyframes erase-user {
+      from {
+          stroke-dashoffset: 850; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+@keyframes draw-envelope { /*Contact select */
+  from {
+      stroke-dashoffset: 850; 
+  }
+  
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+    @keyframes erase-envelope {
+      from {
+          stroke-dashoffset: 850; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+@keyframes draw-ellipsis { /*About emphasis */
+  from {
+      stroke-dashoffset: 1569; 
+  }
+  
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+    @keyframes erase-ellipsis { /*About emphasis */
+      from {
+          stroke-dashoffset: 1569; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+@keyframes draw-emphasis { /*Education emphasis */
+  from {
+      stroke-dashoffset: 1569; 
+  }
+  
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+    @keyframes erase-emphasis { /*Education emphasis */
+      from {
+          stroke-dashoffset: 1569; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+@keyframes draw-star { /*Portfolio emphasis */
+  from {
+      stroke-dashoffset: 1425; 
+  }
+  
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+    @keyframes erase-star { /*Portfolio emphasis */
+      from {
+          stroke-dashoffset: 1425; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+@keyframes erase-shading { /*Shading Erase*/
+      from {
+          stroke-dashoffset: 6680; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+        @keyframes draw-shading { /*Shading Draw*/
+      from {
+          stroke-dashoffset: 6680; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
 
 #arrow {
-   margin-top: -90px;
+   margin-top: -75px;
+   margin-left: 65px;
    height: 80%;
    width: 70%;
    position: absolute;
    z-index: 1;
+}
+
+.shading {
+    stroke-dasharray: 6680;
+    stroke-dashoffset: 6680;
+    animation: erase-briefcase .5s linear forwards normal infinite paused;
 }
 
 #briefcase {
@@ -208,17 +387,10 @@ section {
         margin-top: 10px;
     }
         
-        #select-briefcase-path-draw {
+        #select-briefcase-path {
             stroke-dasharray: 925;
             stroke-dashoffset: 925;
-            animation: draw .5s linear forwards normal infinite paused;
-        
-        }
-        
-        #select-briefcase-path-erase {
-            stroke-dasharray: 925;
-            stroke-dashoffset: 925;
-            animation: erase .5s linear forwards reverse infinite paused;
+            animation: draw-briefcase .5s linear forwards normal infinite paused;
         }
 
 #graduation {
@@ -240,29 +412,7 @@ section {
         #select-graduation-path {
             stroke-dasharray: 1025;
             stroke-dashoffset: 1025;
-            animation: draw 3s linear forwards;
-        }
-
-#envelope {
-    height: 60%;
-    width: 60%;
-    margin-top: -15px;
-    margin-right: 0px;
-}
-
-    #select-envelope {
-        height: 65%;
-        width: 65%;
-        position: absolute;
-        z-index: 1;
-        margin-right: 0px;
-        margin-bottom: 85px;
-    }
-    
-        #select-envelope-path {
-            stroke-dasharray: 850;
-            stroke-dashoffset: 850;
-            animation: dash 3s linear forwards;
+            animation: draw-grad .5s linear forwards normal infinite paused;
         }
 
 #user {
@@ -284,8 +434,34 @@ section {
         #select-user-path {
             stroke-dasharray: 850;
             stroke-dashoffset: 850;
-            animation: dash 3s linear forwards;
+            animation: draw .5s linear forwards normal infinite paused;
         }
+
+
+#envelope {
+    height: 60%;
+    width: 60%;
+    margin-top: -15px;
+    margin-right: 0px;
+}
+
+    #select-envelope {
+        height: 65%;
+        width: 65%;
+        position: absolute;
+        z-index: 1;
+        margin-right: 0px;
+        margin-bottom: 85px;
+    }
+    
+        #select-envelope-path {
+            stroke-dasharray: 850;
+            stroke-dashoffset: 850;
+            animation: draw .5s linear forwards normal infinite paused;
+        }
+        
+
+
 
 .header-text {
     font-size: 600%;
@@ -301,6 +477,44 @@ section {
 .subsection-padding {
     padding-bottom: 65px;
 }
+
+/*Portfolio Styles */
+.portfolio-spacing {
+    padding-bottom: 15px;
+}
+
+.overlay-container:hover .overlay {
+    opacity: .75;
+}
+
+.overlay-container {
+    position: relative;
+}
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: white;
+        
+    }
+    
+        .overlay-text {
+            font-family: 'Permanent Marker';
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
 
 /* Education Styles */
 .vertical-center {
