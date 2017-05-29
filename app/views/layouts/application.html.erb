@@ -10,9 +10,9 @@
   <!-- Custom Stylesheet -->
   <link rel='stylesheet' type='text/css' href='css/custom.css'>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Monoton|Playfair+Display+SC:700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cutive" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet">
   <!-- Material Design Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Font Awesome -->
@@ -21,37 +21,70 @@
   <link rel="stylesheet" href="css/font-mfizz/font-mfizz.css">
 </head>
 <body>
-
   <%= yield %>
   <section id='name'>
       <header>
         <!-- Navbar -->
         <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <!---
-            <button type="button" class="navbar-toggle no-padding-margin">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-          -->
-            <div class='row'>
-              <div class='col-xs-11'>
-                <div><a href="#" class="navbar-link">cody fontes</a></div>
+          <div class="container-fluid header-bg">
+              <div class='row title-top'>
+                <div class='col-xs-8 text-left'>
+                  <div class='title'>C<br>O</div>
+                  <div class='title title-first'>D<br>Y</div>
+                  <div class='title last-name'>F<br>O</div>
+                  <div class='title title-first'>N<br>T</div>
+                  <div class='title title-second'>E<br>S</div>
+                </div>
+                <!--
+                <div class='col-xs-12 text-left'>
+                  <ul class="nav nav-icons">
+                    <li role="presentation" class="active"><a href="#"><i class="fa fa-briefcase fa-3x" aria-hidden="true"></i></a></li>
+                    <li role="presentation"><a href="#"><i class="fa fa-user fa-3x" aria-hidden="true"></i></a></li>
+                    <li role="presentation"><a href="#"><i class="fa fa-graduation-cap fa-3x" aria-hidden="true"></i></a></li>
+                    <li role="presentation"><a href="#"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a></li>
+                  </ul>
+                </div>
+                <div id='arrow-container'></div>
+                -->
               </div>
-              <div class='col-xs-1'>
-                
+              <div class='row' id='subtitle-row'>
+                <div class='col-xs-3'>
+                  <div class='title-subtitle'>nor cal based full stack web developer.</div>
+                </div>
               </div>
-              <div class='col-xs-12'>
-                <div class='nav-subtitle'>|| student web developer ||</div>
+              
+              <!--
+              <div class='row'>
+                <div class='col-xs-12 text-center'>
+                  <div class='nav-social-links'>
+                    <i class="fa fa-github fa-2x nav-social-links" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin-square fa-2x nav-social-links" aria-hidden="true"></i>
+                  </div>
+                  <button type="button" class="navbar-toggle no-padding">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
               </div>
-            </div>
+              
+              <div class='row title-img-top'>
+                <div class='col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4'>
+                    <object id='briefcase-container'></object>
+                    <object id='envelope-container'></object>
+                    <object id='user-container'></object>
+                    <object id='graduation-container'></object>
+                  </div>
+                </div>
+              </div> 
+              -->
           </div>
         </nav>
         
         <!-- Logo/Subtitle -->
         <div class='container-fluid'>
+          
           <!--
           <div class='row'>
             <div class='col-xs-12 text-center'>
@@ -76,6 +109,7 @@
           </div>
           -->
           
+          <!--
           <div class='row' id='header-img'>
             <div class='col-xs-6 no-padding-margin'>
               <div id='arrow-container'></div>
@@ -111,20 +145,21 @@
             </div>
           </div>
         </div>
+        -->
       </header>
   </section>
   
   <!-- About -->
   <section id='about'>
     <div class='container-fluid'>
-      <h3>Who I Am</h3>
+      <h3>About</h3>
       <div class='row' id='animation-container-ellipsis'>
         <div class='col-xs-12'>
           <div id='ellipsis-container' class='section-animation'></div>
         </div>
       </div>
       <div class='row'>
-        <div class='col-xs-12 subsection-padding'>
+        <div class='col-xs-12 subsection-padding col-md-4 col-md-offset-1'>
           <p>
             Hi, I'm Cody Fontes, a full stack web development student, currently based in Northern
             California.

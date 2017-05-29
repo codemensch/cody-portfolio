@@ -49,7 +49,7 @@ $(document).ready(function(){
    
     //Navigation Hover Effects
         //Animate Briefcase Hover
-        $('#briefcase-btn-container').hover(
+        $('#briefcase-container').hover(
           function(){
              $('#select-briefcase-path').css('animation', 'draw-briefcase .25s linear forwards normal 1 running');
           },
@@ -58,7 +58,7 @@ $(document).ready(function(){
         });
         
         //Animate Education Hover
-        $('#graduation-btn-container').hover(
+        $('#graduation-container').hover(
           function(){
              $('#select-graduation-path').css('animation', 'draw-grad .25s linear forwards normal 1 running');
           },
@@ -67,7 +67,7 @@ $(document).ready(function(){
         });
         
         //Animate About Hover
-        $('#user-btn-container').hover(
+        $('#user-container').hover(
           function(){
              $('#select-user-path').css('animation', 'draw-user .25s linear forwards normal 1 running');
           },
@@ -76,7 +76,7 @@ $(document).ready(function(){
         });
         
         //Animate Contact Hover
-        $('#envelope-btn-container').hover(
+        $('#envelope-container').hover(
           function(){
              $('#select-envelope-path').css('animation', 'draw-envelope .25s linear forwards normal 1 running');
           },
@@ -85,11 +85,11 @@ $(document).ready(function(){
         });
 
         //Nav Click
-        $('#briefcase-btn-container').mousedown(function(){
+        $('#briefcase-container').mousedown(function(){
                 $('.shading').css('animation', 'erase-shading 1s linear forwards reverse 1 running');
         });
             
-        $('#briefcase-btn-container').mouseup(function(){
+        $('#briefcase-container').mouseup(function(){
                 $('.shading').css('animation', 'draw-shading 1s linear forwards normal 1 running');
         });
 
