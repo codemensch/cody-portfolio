@@ -446,7 +446,7 @@ section {
    top: 20px;
 }
 
-.shading {
+.briefcase-shading {
     stroke-dasharray: 6680;
     stroke-dashoffset: 6680;
     animation: erase-briefcase .5s linear forwards normal infinite paused;

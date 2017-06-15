@@ -1,9 +1,12 @@
-/*Page Styles*/
-.section-spacing {
-    margin-top: 200px;
+/*Element Styles*/
+a {
+    color: inherit;
 }
 
-/*Element Styles*/
+    a:hover {
+        color: #606366;
+    }
+
 body {
     background-color: #d8dfe5;
     color: #606366;
@@ -18,6 +21,11 @@ p {
     font-size: 115%;
     line-height: 30px;
     letter-spacing: 1px;
+}
+
+/*Full Page Styles*/
+.section-spacing {
+    margin-top: 200px;
 }
 
 .no-padding-margin {
@@ -56,9 +64,36 @@ header {
                 right: 0;
             }
             
-.navigation-container {
+
+
+/*Nav Styles*/
+nav {
     position: fixed;
+    right: 10px;
+    margin-top: 30px;
     z-index: 1;
+}
+
+
+
+#briefcase {
+    height: 70px;
+    width: 70px;
+}
+
+#education {
+    height: 70px;
+    width: 70px;
+}
+
+#user {
+    height: 70px;
+    width: 70px;
+}
+
+#envelope {
+    height: 70px;
+    width: 70px;
 }
 
 /* Main Container Styles */
@@ -101,6 +136,38 @@ header {
         line-height: 120px;
     }
         
+.overlay-container {
+    position: relative;
+}
+
+    .overlay-container:hover .overlay {
+        opacity: .75;
+    }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: white;
+    
+}
+
+    .overlay-text {
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
 
 /* Education Styles */
 .panel {
@@ -164,7 +231,7 @@ header {
 .icon-circle {
     height: 60px;
     width: 60px;
-    background-color: #d8dfe5;
+    background-color: #606366;
     margin-right: 35px;
     display: inline-block;
     border-radius: 100%;
@@ -173,8 +240,119 @@ header {
 .icon-circle i {
     line-height: 59px;
     color: #c0c6cc;
+    transition: color .5s;
 }
 
+    .icon-circle i:hover {
+        color: #fa8072;
+    }
+
+/*Animations*/
+.briefcase-shading {
+    stroke-dasharray: 6680;
+    stroke-dashoffset: 6680;
+    animation: erase-briefcase .5s linear forwards normal infinite paused;
+}
+
+@keyframes erase-briefcase { /*Shading Erase*/
+      from {
+          stroke-dashoffset: 6680; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+        @keyframes draw-briefcase { /*Shading Draw*/
+      from {
+          stroke-dashoffset: 6680; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+.education-shading {
+    stroke-dasharray: 6680;
+    stroke-dashoffset: 6680;
+    animation: erase-education .5s linear forwards normal infinite paused;
+}
+
+@keyframes erase-education { /*Shading Erase*/
+      from {
+          stroke-dashoffset: 6680; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+        @keyframes draw-education { /*Shading Draw*/
+      from {
+          stroke-dashoffset: 6680; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+.user-shading {
+    stroke-dasharray: 6680;
+    stroke-dashoffset: 6680;
+    animation: erase-user .5s linear forwards normal infinite paused;
+}
+
+@keyframes erase-user { /*Shading Erase*/
+      from {
+          stroke-dashoffset: 6680; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+        @keyframes draw-user { /*Shading Draw*/
+      from {
+          stroke-dashoffset: 6680; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+.envelope-shading {
+    stroke-dasharray: 6902.40087890625;
+    stroke-dashoffset: 6902.40087890625;
+    animation: erase-envelope .5s linear forwards normal infinite paused;
+}
+
+@keyframes erase-envelope { /*Shading Erase*/
+      from {
+          stroke-dashoffset: 6902.40087890625; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+        @keyframes draw-envelope { /*Shading Draw*/
+      from {
+          stroke-dashoffset: 6902.40087890625; 
+      }
+      
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+/*Media queries*/
 @media only screen and (min-width: 700px) {
     /*Add margins to desktop view*/
     .section {
